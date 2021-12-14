@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(222, 240, 204);
+    color: #222222;
+}
+
+div.field {
+    padding-bottom: 5px;
+}
+
+div.field label {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 15px;
+    text-align: end;
+    padding-right: 5px;
+}
+
+div.radio input {
+    display: block;
+    float: left;
+    position: relative;
+    left: 58px;
+    width: 138px;
+    height: 15px;
+}

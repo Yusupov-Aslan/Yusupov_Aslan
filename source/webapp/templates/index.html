@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Calculater!</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="field">
+         <label>First number:</label>
+         <input type="text" name="num1"></div><br>
+    <div class="field">
+         <label>Second number: </label>
+         <input type="text" name="num2"></div><br>
+    <div class="radio">
+         <label>
+         <input id="add" name="calculate_type" type="radio" value="add" checked/></label>
+         <label for="add">add</label></div>
+    <div class="radio">
+        <input id="subtract" name="calculate_type" type="radio" value="subtract" />
+        <label for="subtract">subtract</label></div>
+    <div class="radio">
+        <input id="multiply" name="calculate_type" type="radio" value="multiply" />
+        <label for="multiply">multiply</label></div>
+    <div class="radio">
+        <input id="divide" name="calculate_type" type="radio" value="divide" />
+        <label for="divide">divide</label><br><br></div>
+    <div class="field">
+        <label></label>
+        <input  type="submit" value="CALCULATE" /></div>
+</form>
+  <h2> Result: {{result}} </h2>
+</body>
+</html>
